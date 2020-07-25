@@ -22,7 +22,7 @@ class PizzaWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<PizzaController>(
-      init: controller == null ? PizzaController() : controller,
+      init: controller == null ? PizzaController(this.quantityFlavors) : controller,
       builder: (controller) {
         return ClipRRect(
           borderRadius: BorderRadius.circular(this.trayDiameter),

@@ -25,3 +25,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/tray.png
+    - assets/images/chicken.png
+    - assets/images/chocolate.png
+    - assets/images/endive.png
+    - assets/images/neapolitan.png
+    - assets/images/pepperoni.png
+    - assets/images/shrimp.png

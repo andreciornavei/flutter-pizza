@@ -19,11 +19,7 @@ class PizzaArea extends StatelessWidget {
         width: trayDiameter,
         height: trayDiameter,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(this.trayDiameter),
-          border: Border.all(
-            color: Colors.green.withOpacity(1),
-            width: 2,
-          ),
+          borderRadius: BorderRadius.circular(this.trayDiameter),          
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(this.trayDiameter),

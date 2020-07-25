@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pizza/controller.dart';
 import 'package:flutter_pizza/utils/pizza_clipper.dart';
 import 'package:flutter_pizza/utils/pizza_data.dart';
 import 'package:flutter_pizza/utils/pizza_globals.dart';
+import 'package:get/get.dart';
 
 class PizzaFlavor extends StatelessWidget {
+  final PizzaController controller = Get.find();
   final double trayBorder;
   final double trayDiameter;
   final int flavorPosition;
@@ -30,6 +33,7 @@ class PizzaFlavor extends StatelessWidget {
         child: DragTarget<PizzaData>(
           onAccept: (data) {
             print("Dropped ${data.getImagePath()} in $flavorPosition");
+            controller.setDataPosition(this.flavorPosition, data);
             return true;
           },
           onWillAccept: (data) {
@@ -41,9 +45,18 @@ class PizzaFlavor extends StatelessWidget {
             return true;
           },
           builder: (context, candidates, rejects) {
-            return Container(
-              color: PizzaGlobals.colors[this.flavorPosition],
-            );
+            return controller.data.length >= this.flavorPosition && controller.data.elementAt(this.flavorPosition) != null
+                ? Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(controller.data[this.flavorPosition].getImagePath()),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                : Container(
+                    color: PizzaGlobals.colors[this.flavorPosition],
+                  );
           },
         ),
       ),
