@@ -1,5 +1,5 @@
-name: flutter_pizza
-description: A new Flutter project.
+name: flutter_pizza_example
+description: A flutter example to implement flutter_pizza.
 
 publish_to: 'none'
 
@@ -14,11 +14,14 @@ dependencies:
 
   cupertino_icons: ^0.1.3
   get: 
+  flutter_pizza:
+    path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
+  assets:
+    - assets/images/tray.png
