@@ -13,7 +13,7 @@ class CartTotal extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(25),
       decoration: BoxDecoration(
-        color: AppColors.WHITE,
+        color: AppColors.RED,
         border: Border(
           top: BorderSide(
             color: AppColors.LIGHT,
@@ -34,7 +34,7 @@ class CartTotal extends StatelessWidget {
                     "TOTAL",
                     style: TextStyle(
                       fontSize: 12,
-                      color: AppColors.DARK,
+                      color: AppColors.LIGHT,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -43,7 +43,7 @@ class CartTotal extends StatelessWidget {
                       controller.total,
                       style: TextStyle(
                         fontSize: 26,
-                        color: AppColors.RED,
+                        color: AppColors.WHITE,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

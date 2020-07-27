@@ -9,6 +9,8 @@ class PizzaCart {
     this.flavors.value = List.filled(nFlavors, null);
   }
 
+  String get description => flavors.value.where((element) => element != null).map((e) => e.name).join(",");
+
   double get subtotal =>
       flavors.value
           .map((PizzaModel flavor) => flavor == null ? 0 : flavor.price)

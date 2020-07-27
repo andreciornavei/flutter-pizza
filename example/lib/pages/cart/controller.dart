@@ -1,4 +1,7 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza_example/controller.dart';
+import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
@@ -17,17 +20,21 @@ class CartController extends GetxController {
   }
 
   placeOrder() {
-    // appController.cartItems.clear();
-    // Get.back();
-    // Get.snackbar(
-    //   "Placed",
-    //   "Order placed with success!",
-    //   backgroundColor: AppColors.DARK,
-    //   colorText: AppColors.WHITE,
-    //   padding: EdgeInsets.all(15),
-    //   snackPosition: SnackPosition.BOTTOM,
-    //   margin: EdgeInsets.all(25),
-    //   icon: Icon(Feather.check, color: AppColors.LIGHT_GREEN, size: 21),
-    // );
+    appController.cart.clear();
+    Get.back();
+    Get.snackbar(
+      "Placed",
+      "Your pizza is ready to launch!",
+      backgroundColor: AppColors.DARK,
+      colorText: AppColors.WHITE,
+      padding: EdgeInsets.all(15),
+      snackPosition: SnackPosition.BOTTOM,
+      margin: EdgeInsets.all(25),
+      icon: Icon(
+        Feather.check,
+        color: AppColors.RED,
+        size: 21,
+      ),
+    );
   }
 }

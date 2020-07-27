@@ -14,5 +14,10 @@ routes() => [
         transition: Transition.downToUp,
         transitionDuration: Duration(milliseconds: 300),
       ),
-      GetPage(name: "/cart", page: () => Cart()),
+      GetPage(
+        name: "/cart",
+        page: () => Cart(),
+        transition: Transition.rightToLeft,
+        transitionDuration: Duration(milliseconds: 250),
+      ),
     ];

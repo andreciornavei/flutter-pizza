@@ -36,9 +36,11 @@ class CartItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Text(
-                this.cartItem.subtotal.toStringAsFixed(2),
+                this.cartItem.description,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 14,
                   color: AppColors.DARK,
                   fontWeight: FontWeight.bold,
                 ),
@@ -69,6 +71,7 @@ class CartItem extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(width: 15),
         Row(
           children: <Widget>[
             CartItemButton(Feather.minus, this.cartItem.decrementQuantity),

@@ -46,9 +46,11 @@ class CustomAppBar extends PreferredSize {
                       child: Text(
                         this.title,
                         style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: "Verdana",
                           color: AppColors.RED,
-                          fontSize: 21,
                           fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.none,
                         ),
                       ),
                     ),

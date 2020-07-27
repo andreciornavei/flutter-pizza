@@ -19,7 +19,7 @@ class Cart extends StatelessWidget {
         return Scaffold(
           backgroundColor: AppColors.LIGHT,
           appBar: CustomAppBar(
-            title: "Cart",
+            title: "MY CART",
             leadings: [
               CustomAppBarAction(
                 () => Get.back(),
