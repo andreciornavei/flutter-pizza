@@ -8,29 +8,50 @@ class ItemPizza extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Draggable<PizzaData>(
-      data: this.pizza,
-      feedback: Container(
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          image: DecorationImage(
-            image: AssetImage(this.pizza.getImagePath()),
-            fit: BoxFit.cover,
-          ),
-        ),
+    return Container(
+      width: 150,
+      height: 200,
+      margin: EdgeInsets.only(top: 30),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15)
       ),
-      child: Container(
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          image: DecorationImage(
-            image: AssetImage(this.pizza.getImagePath()),
-            fit: BoxFit.cover,
+      child: Stack(
+        overflow: Overflow.visible,
+        children: <Widget>[
+          Positioned(
+            top: -30,
+            child: Column(
+              children: <Widget>[
+                Draggable<PizzaData>(
+                  data: this.pizza,
+                  feedback: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      image: DecorationImage(
+                        image: AssetImage(this.pizza.getImagePath()),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      image: DecorationImage(
+                        image: AssetImage(this.pizza.getImagePath()),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

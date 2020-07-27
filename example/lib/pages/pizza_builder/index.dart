@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza/widget.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/widgets/list.dart';
+import 'package:flutter_pizza_example/widgets/custom_appbar.dart';
+import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
 class PizzaBuilder extends StatelessWidget {
@@ -11,21 +14,55 @@ class PizzaBuilder extends StatelessWidget {
       init: PizzaBuilderController(),
       builder: (controller) {
         return Scaffold(
+          appBar: CustomAppBar(
+            leadings: <Widget>[
+              Image.asset(
+                "assets/logo.png",
+                height: 42,
+              )
+            ],
+            actions: <Widget>[
+              IconButton(
+                onPressed: null,
+                icon: Icon(
+                  Feather.shopping_bag,
+                  size: 24,
+                  color: Colors.red,
+                ),
+              )
+            ],
+          ),
           body: SafeArea(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  PizzaWidget(
-                    250,
-                    "assets/images/tray.png",
-                    quantityFlavors: 4,
-                    trayBorder: 15,
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  top: Get.width - 320,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(25),
+                        topRight: Radius.circular(25),
+                      )
+                    ),
                   ),
-                  SizedBox(height: 25),
-                  Obx(() => ListPizzas(controller.pizzas)),
-                ],
-              ),
+                ),
+                Column(
+                  children: <Widget>[
+                    PizzaWidget(
+                      Get.width - 150,
+                      "assets/images/tray.png",
+                      quantityFlavors: 4,
+                      trayBorder: 15,
+                    ),
+                    SizedBox(height: 25),
+                    Obx(() => ListPizzas(controller.pizzas)),
+                  ],
+                ),
+              ],
             ),
           ),
         );

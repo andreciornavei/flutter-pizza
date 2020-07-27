@@ -38,10 +38,12 @@ class PizzaFlavor extends StatelessWidget {
           },
           onWillAccept: (data) {
             print("Entered ${data.getImagePath()} in $flavorPosition");
+            controller.setTmpDataPosition(this.flavorPosition, data);
             return true;
           },
           onLeave: (data) {
             print("Leaved from $flavorPosition");
+            controller.removeTmpDataPosition(this.flavorPosition);
             return true;
           },
           builder: (context, candidates, rejects) {
