@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pizza/utils/pizza_data.dart';
 import 'package:flutter_pizza_example/models/pizza.model.dart';
+import 'package:flutter_pizza_example/utils/colors.dart';
 
 class ItemPizza extends StatelessWidget {
   final PizzaModel pizza;
@@ -13,7 +14,7 @@ class ItemPizza extends StatelessWidget {
       height: 200,
       margin: EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.WHITE,
         borderRadius: BorderRadius.circular(15)
       ),
       child: Stack(

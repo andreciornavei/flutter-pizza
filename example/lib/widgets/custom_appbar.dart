@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_pizza_example/utils/colors.dart';
 
 class CustomAppBar extends PreferredSize {
   final String title;
@@ -43,7 +44,7 @@ class CustomAppBar extends PreferredSize {
                     child: Text(
                       this.title,
                       style: TextStyle(
-                        color: Colors.red,
+                        color: AppColors.RED,
                         fontSize: 21,
                         fontWeight: FontWeight.bold,
                       ),

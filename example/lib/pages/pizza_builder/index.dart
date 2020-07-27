@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza/widget.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/widgets/list.dart';
+import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:flutter_pizza_example/widgets/custom_appbar.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
@@ -27,7 +28,7 @@ class PizzaBuilder extends StatelessWidget {
                 icon: Icon(
                   Feather.shopping_bag,
                   size: 24,
-                  color: Colors.red,
+                  color: AppColors.RED,
                 ),
               )
             ],
@@ -42,7 +43,7 @@ class PizzaBuilder extends StatelessWidget {
                   bottom: 0,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: AppColors.RED,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(25),
                         topRight: Radius.circular(25),
