@@ -56,9 +56,7 @@ class PizzaFlavor extends StatelessWidget {
                       ),
                     ),
                   )
-                : Container(
-                    color: PizzaGlobals.colors[this.flavorPosition],
-                  );
+                : SizedBox.shrink();
           },
         ),
       ),

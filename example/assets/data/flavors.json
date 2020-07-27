@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Chicken",
+        "amount": 15,
+        "image": "assets/images/chicken.png",
+        "description": "Description to pizza"
+    },
+    {
+        "name": "Chocolate",
+        "amount": 15,
+        "image": "assets/images/chocolate.png",
+        "description": "Description to pizza"
+    },
+    {
+        "name": "Endive",
+        "amount": 15,
+        "image": "assets/images/endive.png",
+        "description": "Description to pizza"
+    },
+    {
+        "name": "Neapolitan",
+        "amount": 15,
+        "image": "assets/images/neapolitan.png",
+        "description": "Description to pizza"
+    },
+    {
+        "name": "Pepperoni",
+        "amount": 15,
+        "image": "assets/images/pepperoni.png",
+        "description": "Description to pizza"
+    },
+    {
+        "name": "Shrimp",
+        "amount": 15,
+        "image": "assets/images/shrimp.png",
+        "description": "Description to pizza"
+    }
+]

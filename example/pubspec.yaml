@@ -25,6 +25,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/data/flavors.json
     - assets/logo.png
     - assets/images/tray.png
     - assets/images/chicken.png
