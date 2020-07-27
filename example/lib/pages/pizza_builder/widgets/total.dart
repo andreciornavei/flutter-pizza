@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:flutter_pizza_example/widgets/planet_button.dart';
+import 'package:get/get.dart';
 
 class Total extends StatelessWidget {
 
+  final PizzaBuilderController controller = Get.find();
+  final bool ready;
   final double total;
 
-  Total(this.total);
+  Total(this.total, this.ready);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class Total extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "TOTAL",
+                  "SUBTOTAL",
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
@@ -46,7 +50,7 @@ class Total extends StatelessWidget {
           ),
           Expanded(
             child: PlanetButton(
-              () => {},
+              ready ? controller.add : null,
               "ADD IT",
               Feather.shopping_cart,
             ),

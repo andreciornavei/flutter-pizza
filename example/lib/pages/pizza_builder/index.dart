@@ -72,6 +72,7 @@ class PizzaBuilder extends StatelessWidget {
                         "assets/images/tray.png",
                         quantityFlavors: 4,
                         trayBorder: 15,
+                        controller: controller.pizzaController,
                       ),
                       SizedBox(height: 25),
                       Obx(() => ListPizzas(controller.pizzas.value)),
@@ -81,7 +82,12 @@ class PizzaBuilder extends StatelessWidget {
               ),
             ),
           ),
-          bottomNavigationBar: Total(controller.total),
+          bottomNavigationBar: Obx(
+            () => Total(
+              controller.item.value.subtotal ?? 0,
+              controller.item.value.ready ?? false,
+            ),
+          ),
         );
       },
     );

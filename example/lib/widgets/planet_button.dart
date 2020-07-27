@@ -12,6 +12,7 @@ class PlanetButton extends StatelessWidget {
     return FlatButton(
       onPressed: action,
       color: AppColors.WHITE,
+      disabledColor: AppColors.DARK.withOpacity(0.2),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
       ),
@@ -25,7 +26,7 @@ class PlanetButton extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
-                color: AppColors.DARK,
+                color: action == null ? AppColors.WHITE.withOpacity(0.3) : AppColors.DARK,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -34,12 +35,12 @@ class PlanetButton extends StatelessWidget {
             height: 40,
             width: 40,
             decoration: BoxDecoration(
-              color: AppColors.RED,
+              color: action == null ? AppColors.RED.withOpacity(0.3) : AppColors.RED,
               borderRadius: BorderRadius.circular(40),
             ),
             child: Icon(
               this.icon,
-              color: AppColors.WHITE,
+              color: action == null ? AppColors.WHITE.withOpacity(0.3) : AppColors.WHITE,
               size: 16,
             ),
           ),
