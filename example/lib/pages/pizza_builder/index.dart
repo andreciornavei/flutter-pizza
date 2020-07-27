@@ -8,6 +8,8 @@ import 'package:flutter_pizza_example/widgets/custom_appbar.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
+import 'widgets/total.dart';
+
 class PizzaBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,16 +24,16 @@ class PizzaBuilder extends StatelessWidget {
                 height: 42,
               )
             ],
-            actions: <Widget>[
-              IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Feather.shopping_bag,
-                  size: 24,
-                  color: AppColors.RED,
-                ),
-              )
-            ],
+            // actions: <Widget>[
+            //   IconButton(
+            //     onPressed: null,
+            //     icon: Icon(
+            //       Feather.shopping_bag,
+            //       size: 24,
+            //       color: AppColors.RED,
+            //     ),
+            //   )
+            // ],
           ),
           body: Container(
             height: Get.height - 100,
@@ -79,6 +81,7 @@ class PizzaBuilder extends StatelessWidget {
               ),
             ),
           ),
+          bottomNavigationBar: Total(controller.total),
         );
       },
     );

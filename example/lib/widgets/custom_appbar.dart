@@ -20,48 +20,51 @@ class CustomAppBar extends PreferredSize {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: preferredSize.height,
-      color: Colors.transparent,
-      alignment: Alignment.center,
-      child: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    left: 25,
-                    top: 5,
-                    bottom: 5,
-                    child: Row(
-                      children: leadings,
-                    ),
-                  ),
-                  Center(
-                    child: Text(
-                      this.title,
-                      style: TextStyle(
-                        color: AppColors.RED,
-                        fontSize: 21,
-                        fontWeight: FontWeight.bold,
+    return Hero(
+      tag: "header",
+      child: Container(
+        height: preferredSize.height,
+        color: Colors.transparent,
+        alignment: Alignment.center,
+        child: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Expanded(
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      left: 25,
+                      top: 5,
+                      bottom: 5,
+                      child: Row(
+                        children: leadings,
                       ),
                     ),
-                  ),
-                  Positioned(
-                    right: 25,
-                    top: 5,
-                    bottom: 5,
-                    child: Row(
-                      children: actions,
+                    Center(
+                      child: Text(
+                        this.title,
+                        style: TextStyle(
+                          color: AppColors.RED,
+                          fontSize: 21,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                    Positioned(
+                      right: 25,
+                      top: 5,
+                      bottom: 5,
+                      child: Row(
+                        children: actions,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

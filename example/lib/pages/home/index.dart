@@ -20,16 +20,16 @@ class Home extends StatelessWidget {
                 height: 42,
               )
             ],
-            actions: <Widget>[
-              IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Feather.shopping_bag,
-                  size: 24,
-                  color: AppColors.RED,
-                ),
-              )
-            ],
+            // actions: <Widget>[
+            //   IconButton(
+            //     onPressed: null,
+            //     icon: Icon(
+            //       Feather.shopping_bag,
+            //       size: 24,
+            //       color: AppColors.RED,
+            //     ),
+            //   )
+            // ],
           ),
           body: Container(
             child: RawMaterialButton(

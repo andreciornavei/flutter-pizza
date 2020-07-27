@@ -7,5 +7,5 @@ import 'pages/pizza_builder/index.dart';
 
 routes() => [
   GetPage(name:"/", page: () => Home()),
-  GetPage(name:"/pizza_builder/:flavors", page: () => PizzaBuilder(), transition: Transition.downToUp, transitionDuration: Duration(milliseconds: 500)),
+  GetPage(name:"/pizza_builder/:flavors", page: () => PizzaBuilder(), transition: Transition.downToUp, transitionDuration: Duration(milliseconds: 300)),
 ];
