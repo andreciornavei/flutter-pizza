@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pizza/controller.dart';
 import 'package:flutter_pizza/utils/pizza_clipper.dart';
 import 'package:flutter_pizza/utils/pizza_data.dart';
-import 'package:flutter_pizza/utils/pizza_globals.dart';
-import 'package:get/get.dart';
 
 class PizzaFlavor extends StatelessWidget {
-  final PizzaController controller = Get.find();
   final double trayBorder;
   final double trayDiameter;
   final int flavorPosition;
   final int quantityFlavors;
+  final List<PizzaData> data;
+  final Function(int, PizzaData) setDataPosition;
+  final Function(int, PizzaData) setTmpDataPosition;
+  final Function(int) removeTmpDataPosition;
 
   PizzaFlavor(
     this.quantityFlavors,
     this.trayDiameter,
     this.trayBorder,
     this.flavorPosition,
+    this.data,
+    this.setDataPosition,
+    this.setTmpDataPosition,
+    this.removeTmpDataPosition,
   );
 
   @override
@@ -32,26 +36,26 @@ class PizzaFlavor extends StatelessWidget {
             print("Touchig the slice of pizza in part $flavorPosition"),
         child: DragTarget<PizzaData>(
           onAccept: (data) {
-            print("Dropped ${data.getImagePath()} in $flavorPosition");
-            controller.setDataPosition(this.flavorPosition, data);
+            setDataPosition(this.flavorPosition, data);
             return true;
           },
           onWillAccept: (data) {
-            print("Entered ${data.getImagePath()} in $flavorPosition");
-            controller.setTmpDataPosition(this.flavorPosition, data);
+            setTmpDataPosition(this.flavorPosition, data);
             return true;
           },
           onLeave: (data) {
-            print("Leaved from $flavorPosition");
-            controller.removeTmpDataPosition(this.flavorPosition);
+            removeTmpDataPosition(this.flavorPosition);
             return true;
           },
           builder: (context, candidates, rejects) {
-            return controller.data.length >= this.flavorPosition && controller.data.elementAt(this.flavorPosition) != null
+            return data.length >= this.flavorPosition &&
+                    data.elementAt(this.flavorPosition) != null
                 ? Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(controller.data[this.flavorPosition].getImagePath()),
+                        image: AssetImage(
+                          data[this.flavorPosition].getImagePath(),
+                        ),
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -1,4 +1,3 @@
-import 'package:flutter_pizza/controller.dart';
 import 'package:flutter_pizza_example/models/pizza.model.dart';
 import 'package:flutter_pizza_example/models/pizza_cart.model.dart';
 import 'package:flutter_pizza_example/utils/json.dart';
@@ -14,15 +13,7 @@ class PizzaBuilderController extends GetxController {
     PizzaCart(int.parse(Get.parameters["flavors"])),
   );
 
-  PizzaController pizzaController;
-
   PizzaBuilderController() {
-    pizzaController = PizzaController<PizzaModel>(
-      quantityFlavors: int.parse(Get.parameters["flavors"]),
-      onFlavorDropped: (int position, PizzaModel flavor) {
-        item.value.flavors[position] = flavor;
-      },
-    );
     loadFlavors();
   }
 

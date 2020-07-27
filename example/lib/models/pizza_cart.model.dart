@@ -17,4 +17,19 @@ class PizzaCart {
 
   bool get ready => flavors.value.contains(null) == false;
 
+  incrementQuantity() {
+    if (this.quantity.value >= 10) {
+      this.quantity.value = 10;
+    } else {
+      this.quantity.value += 1;
+    }
+  }
+
+  decrementQuantity() {
+    if (this.quantity.value <= 1) {
+      this.quantity.value = 1;
+    } else {
+      this.quantity.value -= 1;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_pizza/widget.dart';
+import 'package:flutter_pizza/index.dart';
+import 'package:flutter_pizza/utils/pizza_data.dart';
+import 'package:flutter_pizza_example/models/pizza.model.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/widgets/list.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
@@ -28,7 +30,7 @@ class PizzaBuilder extends StatelessWidget {
             actions: <Widget>[
               Obx(
                 () => CustomAppBarAction(
-                  () => {},
+                  () => Get.toNamed("/cart"),
                   Feather.shopping_bag,
                   quantity: controller.appController.cart.length ?? 0,
                 ),
@@ -77,9 +79,11 @@ class PizzaBuilder extends StatelessWidget {
                       PizzaWidget(
                         Get.width - 150,
                         "assets/images/tray.png",
-                        quantityFlavors: 4,
                         trayBorder: 15,
-                        controller: controller.pizzaController,
+                        quantityFlavors: int.parse(Get.parameters["flavors"]),
+                        onFlavorDropped: (int position, PizzaData flavor){
+                          controller.item.value.flavors[position] = flavor;
+                        },
                       ),
                       SizedBox(height: 25),
                       Obx(() => ListPizzas(controller.pizzas.value)),
