@@ -64,6 +64,7 @@ class ItemPizza extends StatelessWidget {
             padding: EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 80),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   this.pizza.name,
@@ -75,10 +76,20 @@ class ItemPizza extends StatelessWidget {
                 ),
                 Text(
                   this.pizza.description,
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: AppColors.DARK,
                     fontWeight: FontWeight.normal,
-                    fontSize: 12,
+                    fontSize: 11,
+                  ),
+                ),
+                Text(
+                  this.pizza.priceDollar,
+                  style: TextStyle(
+                    color: AppColors.RED,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
                   ),
                 ),
               ],

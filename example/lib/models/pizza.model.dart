@@ -17,4 +17,6 @@ class PizzaModel implements PizzaData {
 
   @override
   getImagePath() => this.imagePath;
+
+  get priceDollar => "U\$ ${(this.price??0).toStringAsFixed(2)}";
 }

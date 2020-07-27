@@ -2,42 +2,42 @@
     {
         "id": 1,
         "name": "Chicken",
-        "amount": 33,
+        "price": 33.0,
         "image": "assets/images/chicken.png",
         "description": "Fresh tomato sauce, lightly seasoned shredded chicken breast, topped with catupiry cheese, oregano and black olives."
     },
     {
         "id": 2,
         "name": "Chocolate",
-        "amount": 45,
+        "price": 45.0,
         "image": "assets/images/chocolate.png",
         "description": "Special chocolate cream and granulated chocolate."
     },
     {
         "id": 3,
         "name": "Arugula",
-        "amount": 28,
+        "price": 28.0,
         "image": "assets/images/argula.png",
         "description": "Tomato sauce, sun-dried tomatoes, mozzarella, arugula and olive oil (after roasting)."
     },
     {
         "id": 4,
         "name": "Neapolitan",
-        "amount": 25,
+        "price": 25.0,
         "image": "assets/images/neapolitan.png",
         "description": "Fresh tomato sauce, special mozzarella, tomato slices, Parmesan cheese, oregano and black olives."
     },
     {
         "id": 5,
         "name": "Pepperoni",
-        "amount": 36,
+        "price": 36.0,
         "image": "assets/images/pepperoni.png",
         "description": "Tomato sauce, mozzarella, pepperoni, champignon and cheddar."
     },
     {
         "id": 6,
         "name": "Shrimp",
-        "amount": 44,
+        "price": 44.0,
         "image": "assets/images/shrimp.png",
         "description": "Tomato sauce, mozzarella, shrimp in butter, red, yellow and green peppers, onions and olives."
     }
