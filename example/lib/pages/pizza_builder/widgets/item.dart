@@ -10,15 +10,23 @@ class ItemPizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: 130,
       height: 200,
-      margin: EdgeInsets.only(top: 30),
+      margin: EdgeInsets.only(top: 30, bottom: 15),
       decoration: BoxDecoration(
         color: AppColors.WHITE,
-        borderRadius: BorderRadius.circular(15)
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            blurRadius: 15,
+            color: AppColors.DARK.withOpacity(0.1),
+            offset: Offset(6, 10),
+          ),
+        ],
       ),
       child: Stack(
         overflow: Overflow.visible,
+        alignment: Alignment.center,
         children: <Widget>[
           Positioned(
             top: -30,

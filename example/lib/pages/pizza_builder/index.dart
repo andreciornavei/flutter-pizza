@@ -33,37 +33,50 @@ class PizzaBuilder extends StatelessWidget {
               )
             ],
           ),
-          body: SafeArea(
-            child: Stack(
-              children: <Widget>[
-                Positioned(
-                  top: Get.width - 320,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.RED,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
-                        topRight: Radius.circular(25),
-                      )
+          body: Container(
+            height: Get.height - 100,
+            child: SafeArea(
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: Get.width - 320,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.RED,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(25),
+                          topRight: Radius.circular(25),
+                        ),
+                      ),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.topLeft,
+                      child: IconButton(
+                        onPressed: () => Get.back(),
+                        icon: Icon(
+                          Feather.arrow_left,
+                          color: AppColors.WHITE,
+                          size: 21,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                Column(
-                  children: <Widget>[
-                    PizzaWidget(
-                      Get.width - 150,
-                      "assets/images/tray.png",
-                      quantityFlavors: 4,
-                      trayBorder: 15,
-                    ),
-                    SizedBox(height: 25),
-                    Obx(() => ListPizzas(controller.pizzas)),
-                  ],
-                ),
-              ],
+                  Column(
+                    children: <Widget>[
+                      PizzaWidget(
+                        Get.width - 150,
+                        "assets/images/tray.png",
+                        quantityFlavors: 4,
+                        trayBorder: 15,
+                      ),
+                      SizedBox(height: 25),
+                      Obx(() => ListPizzas(controller.pizzas)),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );

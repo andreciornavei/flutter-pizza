@@ -11,7 +11,7 @@ class ListPizzas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230,
+      height: 245,
       child: ListView.separated(
         padding: EdgeInsets.symmetric(horizontal: 25),
         scrollDirection: Axis.horizontal,
