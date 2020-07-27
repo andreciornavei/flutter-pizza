@@ -60,6 +60,30 @@ class ItemPizza extends StatelessWidget {
               ],
             ),
           ),
+          Padding(
+            padding: EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 80),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  this.pizza.name,
+                  style: TextStyle(
+                    color: AppColors.RED,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  this.pizza.description,
+                  style: TextStyle(
+                    color: AppColors.DARK,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

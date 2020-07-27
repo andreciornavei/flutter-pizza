@@ -28,9 +28,9 @@ flutter:
     - assets/data/flavors.json
     - assets/logo.png
     - assets/images/tray.png
+    - assets/images/argula.png
     - assets/images/chicken.png
     - assets/images/chocolate.png
-    - assets/images/endive.png
     - assets/images/neapolitan.png
     - assets/images/pepperoni.png
     - assets/images/shrimp.png

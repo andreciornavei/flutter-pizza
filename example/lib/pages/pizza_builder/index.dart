@@ -72,7 +72,7 @@ class PizzaBuilder extends StatelessWidget {
                         trayBorder: 15,
                       ),
                       SizedBox(height: 25),
-                      Obx(() => ListPizzas(controller.pizzas)),
+                      Obx(() => ListPizzas(controller.pizzas.value)),
                     ],
                   ),
                 ],

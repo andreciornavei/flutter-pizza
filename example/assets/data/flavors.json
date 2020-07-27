@@ -1,38 +1,44 @@
 [
     {
+        "id": 1,
         "name": "Chicken",
-        "amount": 15,
+        "amount": 33,
         "image": "assets/images/chicken.png",
-        "description": "Description to pizza"
+        "description": "Fresh tomato sauce, lightly seasoned shredded chicken breast, topped with catupiry cheese, oregano and black olives."
     },
     {
+        "id": 2,
         "name": "Chocolate",
-        "amount": 15,
+        "amount": 45,
         "image": "assets/images/chocolate.png",
-        "description": "Description to pizza"
+        "description": "Special chocolate cream and granulated chocolate."
     },
     {
-        "name": "Endive",
-        "amount": 15,
-        "image": "assets/images/endive.png",
-        "description": "Description to pizza"
+        "id": 3,
+        "name": "Arugula",
+        "amount": 28,
+        "image": "assets/images/argula.png",
+        "description": "Tomato sauce, sun-dried tomatoes, mozzarella, arugula and olive oil (after roasting)."
     },
     {
+        "id": 4,
         "name": "Neapolitan",
-        "amount": 15,
+        "amount": 25,
         "image": "assets/images/neapolitan.png",
-        "description": "Description to pizza"
+        "description": "Fresh tomato sauce, special mozzarella, tomato slices, Parmesan cheese, oregano and black olives."
     },
     {
+        "id": 5,
         "name": "Pepperoni",
-        "amount": 15,
+        "amount": 36,
         "image": "assets/images/pepperoni.png",
-        "description": "Description to pizza"
+        "description": "Tomato sauce, mozzarella, pepperoni, champignon and cheddar."
     },
     {
+        "id": 6,
         "name": "Shrimp",
-        "amount": 15,
+        "amount": 44,
         "image": "assets/images/shrimp.png",
-        "description": "Description to pizza"
+        "description": "Tomato sauce, mozzarella, shrimp in butter, red, yellow and green peppers, onions and olives."
     }
 ]
