@@ -5,7 +5,10 @@ import 'package:flutter_pizza_example/utils/json.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
+import '../../controller.dart';
+
 class PizzaBuilderController extends GetxController {
+  AppController appController = Get.find();
   RxList<PizzaModel> pizzas = RxList<PizzaModel>([]);
   Rx<PizzaCart> item = Rx<PizzaCart>(
     PizzaCart(int.parse(Get.parameters["flavors"])),
@@ -23,8 +26,9 @@ class PizzaBuilderController extends GetxController {
     loadFlavors();
   }
 
-  add(){
-    print("ADICIONA AO CARRMINHO");
+  add() {
+    appController.cart.add(item.value);
+    Get.back();
   }
 
   loadFlavors() async {
