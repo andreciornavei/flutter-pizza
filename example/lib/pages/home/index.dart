@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza_example/pages/home/controller.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:flutter_pizza_example/widgets/custom_appbar.dart';
+import 'package:flutter_pizza_example/widgets/custom_appbar_action.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
@@ -20,16 +21,15 @@ class Home extends StatelessWidget {
                 height: 42,
               )
             ],
-            // actions: <Widget>[
-            //   IconButton(
-            //     onPressed: null,
-            //     icon: Icon(
-            //       Feather.shopping_bag,
-            //       size: 24,
-            //       color: AppColors.RED,
-            //     ),
-            //   )
-            // ],
+            actions: <Widget>[
+              Obx(
+                () => CustomAppBarAction(
+                  () => {},
+                  Feather.shopping_bag,
+                  quantity: controller.appController.cart.length ?? 0,
+                ),
+              ),
+            ],
           ),
           body: Container(
             child: RawMaterialButton(

@@ -5,6 +5,7 @@ import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/widgets/list.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:flutter_pizza_example/widgets/custom_appbar.dart';
+import 'package:flutter_pizza_example/widgets/custom_appbar_action.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
@@ -24,16 +25,15 @@ class PizzaBuilder extends StatelessWidget {
                 height: 42,
               )
             ],
-            // actions: <Widget>[
-            //   IconButton(
-            //     onPressed: null,
-            //     icon: Icon(
-            //       Feather.shopping_bag,
-            //       size: 24,
-            //       color: AppColors.RED,
-            //     ),
-            //   )
-            // ],
+            actions: <Widget>[
+              Obx(
+                () => CustomAppBarAction(
+                  () => {},
+                  Feather.shopping_bag,
+                  quantity: controller.appController.cart.length ?? 0,
+                ),
+              ),
+            ],
           ),
           body: Container(
             height: Get.height - 100,
@@ -52,6 +52,13 @@ class PizzaBuilder extends StatelessWidget {
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25),
                         ),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            blurRadius: 15,
+                            color: AppColors.DARK.withOpacity(0.4),
+                            offset: Offset(0, 0),
+                          ),
+                        ],
                       ),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.topLeft,

@@ -8,7 +8,7 @@ import 'package:get/state_manager.dart';
 import '../../controller.dart';
 
 class PizzaBuilderController extends GetxController {
-  AppController appController = Get.find();
+  final AppController appController = Get.find();
   RxList<PizzaModel> pizzas = RxList<PizzaModel>([]);
   Rx<PizzaCart> item = Rx<PizzaCart>(
     PizzaCart(int.parse(Get.parameters["flavors"])),
