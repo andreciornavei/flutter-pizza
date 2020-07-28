@@ -23,7 +23,7 @@ class PizzaClipper extends CustomClipper<Path> {
     path.arcTo(
       Rect.fromCircle(center: Offset(pizzaRay, pizzaRay), radius: pizzaRay),
       startRadian,
-      endRadian - startRadian,
+      endRadian - startRadian - 0.0001,
       false,
     );
     path.close();
