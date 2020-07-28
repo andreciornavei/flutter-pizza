@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza_example/controller.dart';
+import 'package:flutter_pizza_example/models/pizza_cart.model.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
@@ -15,8 +16,8 @@ class CartController extends GetxController {
     return "U\$" + fold.toStringAsFixed(2);
   }
 
-  deleteItem(int position) {
-    appController.cart.removeAt(position);
+  deleteItem(PizzaCart item) {
+    appController.cart.remove(item);
   }
 
   placeOrder() {

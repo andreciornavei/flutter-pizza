@@ -11,9 +11,8 @@ import 'cart_item_button.dart';
 class CartItem extends StatelessWidget {
   final CartController cartController = Get.find();
 
-  final int position;
   final PizzaCart cartItem;
-  CartItem(this.position, this.cartItem);
+  CartItem(this.cartItem);
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +78,7 @@ class CartItem extends StatelessWidget {
             CartItemButton(Feather.plus, this.cartItem.incrementQuantity),
             SizedBox(width: 10),
             CartItemButton(
-                Feather.trash, () => cartController.deleteItem(this.position)),
+                Feather.trash, () => cartController.deleteItem(this.cartItem)),
           ],
         )
       ],

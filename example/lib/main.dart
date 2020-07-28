@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     Get.put(AppController());
     return GetMaterialApp(
       title: 'Pizza Planet',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: AppColors.RED,
         visualDensity: VisualDensity.adaptivePlatformDensity,
