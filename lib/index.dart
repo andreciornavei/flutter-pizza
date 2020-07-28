@@ -30,7 +30,6 @@ class _PizzaWidget extends State<PizzaWidget> {
 
   @override
   initState() {
-    print("INITIALIZE STATE FOR ${this.widget.quantityFlavors}");
     super.initState();
     data = List.generate(this.widget.quantityFlavors, (_) => null);
     tmpData = List.generate(this.widget.quantityFlavors, (_) => null);
