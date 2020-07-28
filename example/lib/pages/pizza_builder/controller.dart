@@ -24,7 +24,7 @@ class PizzaBuilderController extends GetxController {
 
   loadFlavors() async {
     //Load categories
-    List<dynamic> dataPizzas = await loadJson("assets/data/flavors.json");
+    List<dynamic> dataPizzas = await loadJson("assets/data/pizzas.json");
     pizzas.addAll(
       dataPizzas
           .map<PizzaModel>((pizza) => PizzaModel(

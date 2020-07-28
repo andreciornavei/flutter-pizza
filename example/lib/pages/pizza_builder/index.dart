@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_pizza/index.dart';
 import 'package:flutter_pizza/utils/pizza_data.dart';
-import 'package:flutter_pizza_example/models/pizza.model.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/controller.dart';
 import 'package:flutter_pizza_example/pages/pizza_builder/widgets/list.dart';
 import 'package:flutter_pizza_example/utils/colors.dart';
@@ -23,7 +22,7 @@ class PizzaBuilder extends StatelessWidget {
           appBar: CustomAppBar(
             leadings: <Widget>[
               Image.asset(
-                "assets/logo.png",
+                "assets/images/app/logo.png",
                 height: 42,
               )
             ],
@@ -78,7 +77,7 @@ class PizzaBuilder extends StatelessWidget {
                     children: <Widget>[
                       PizzaWidget(
                         Get.width - 150,
-                        "assets/images/tray.png",
+                        "assets/images/app/tray.png",
                         trayBorder: 15,
                         quantityFlavors: int.parse(Get.parameters["flavors"]),
                         onFlavorDropped: (int position, PizzaData flavor){

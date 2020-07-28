@@ -25,15 +25,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/data/flavors.json
+    - assets/data/pizzas.json
     - assets/images/app/background_campaign.jpg
     - assets/images/app/pizza_campaign.png
     - assets/images/app/pizza_outline.png
-    - assets/logo.png
-    - assets/images/tray.png
-    - assets/images/argula.png
-    - assets/images/chicken.png
-    - assets/images/chocolate.png
-    - assets/images/neapolitan.png
-    - assets/images/pepperoni.png
-    - assets/images/shrimp.png
+    - assets/images/app/logo.png
+    - assets/images/app/tray.png
+    - assets/images/pizzas/argula.png
+    - assets/images/pizzas/chicken.png
+    - assets/images/pizzas/chocolate.png
+    - assets/images/pizzas/neapolitan.png
+    - assets/images/pizzas/pepperoni.png
+    - assets/images/pizzas/shrimp.png

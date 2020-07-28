@@ -23,7 +23,7 @@ class CartItem extends StatelessWidget {
       children: <Widget>[
         PizzaWidget(
           50,
-          "assets/images/tray.png",
+          "assets/images/app/tray.png",
           trayBorder: 3,
           quantityFlavors: cartItem.flavors.value.length,
           initialData: cartItem.flavors.value,

@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
           appBar: CustomAppBar(
             leadings: <Widget>[
               Image.asset(
-                "assets/logo.png",
+                "assets/images/app/logo.png",
                 height: 42,
               )
             ],
