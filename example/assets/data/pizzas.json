@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Chicken",
+        "price": 33.0,
+        "image": "assets/images/pizzas/chicken.png",
+        "description": "Fresh tomato sauce, lightly seasoned shredded chicken breast, topped with catupiry cheese, oregano and black olives."
+    },
+    {
+        "id": 2,
+        "name": "Chocolate",
+        "price": 45.0,
+        "image": "assets/images/pizzas/chocolate.png",
+        "description": "Special chocolate cream and granulated chocolate."
+    },
+    {
+        "id": 3,
+        "name": "Arugula",
+        "price": 28.0,
+        "image": "assets/images/pizzas/argula.png",
+        "description": "Tomato sauce, sun-dried tomatoes, mozzarella, arugula and olive oil (after roasting)."
+    },
+    {
+        "id": 4,
+        "name": "Neapolitan",
+        "price": 25.0,
+        "image": "assets/images/pizzas/neapolitan.png",
+        "description": "Fresh tomato sauce, special mozzarella, tomato slices, Parmesan cheese, oregano and black olives."
+    },
+    {
+        "id": 5,
+        "name": "Pepperoni",
+        "price": 36.0,
+        "image": "assets/images/pizzas/pepperoni.png",
+        "description": "Tomato sauce, mozzarella, pepperoni, champignon and cheddar."
+    },
+    {
+        "id": 6,
+        "name": "Shrimp",
+        "price": 44.0,
+        "image": "assets/images/pizzas/shrimp.png",
+        "description": "Tomato sauce, mozzarella, shrimp in butter, red, yellow and green peppers, onions and olives."
+    }
+]

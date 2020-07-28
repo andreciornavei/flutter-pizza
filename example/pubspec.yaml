@@ -1,0 +1,38 @@
+name: flutter_pizza_example
+description: A flutter example to implement flutter_pizza.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_icons:
+  get: 
+  flutter_pizza:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/pizzas.json
+    - assets/images/app/background_campaign.jpg
+    - assets/images/app/pizza_campaign.png
+    - assets/images/app/pizza_outline.png
+    - assets/images/app/logo.png
+    - assets/images/app/tray.png
+    - assets/images/pizzas/argula.png
+    - assets/images/pizzas/chicken.png
+    - assets/images/pizzas/chocolate.png
+    - assets/images/pizzas/neapolitan.png
+    - assets/images/pizzas/pepperoni.png
+    - assets/images/pizzas/shrimp.png
