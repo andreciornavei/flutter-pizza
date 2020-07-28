@@ -8,7 +8,7 @@ class AppColors {
   static final MaterialColor LIGHT = _factoryColor(0xfff4f4f8);
 
   // ignore: non_constant_identifier_names
-  static final MaterialColor LIGHT_GREY = _factoryColor(0xffd8d8d8);
+  static final MaterialColor GREY = _factoryColor(0xffAAAAAA);
 
   // ignore: non_constant_identifier_names
   static final MaterialColor DARK = _factoryColor(0xff3a3a3a);

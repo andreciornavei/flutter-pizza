@@ -26,6 +26,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/data/flavors.json
+    - assets/images/app/background_campaign.jpg
+    - assets/images/app/pizza_campaign.png
+    - assets/images/app/pizza_outline.png
     - assets/logo.png
     - assets/images/tray.png
     - assets/images/argula.png

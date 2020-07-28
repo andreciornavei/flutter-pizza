@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pizza_example/routes.dart';
+import 'package:flutter_pizza_example/utils/colors.dart';
 import 'package:get/get.dart';
 
 import 'controller.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Pizza Planet',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: AppColors.RED,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: "/",

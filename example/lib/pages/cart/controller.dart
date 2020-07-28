@@ -24,7 +24,7 @@ class CartController extends GetxController {
     Get.back();
     Get.snackbar(
       "Placed",
-      "Your pizza is ready to launch!",
+      "Your pizza is going to launch!",
       backgroundColor: AppColors.DARK,
       colorText: AppColors.WHITE,
       padding: EdgeInsets.all(15),
