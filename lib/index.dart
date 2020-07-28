@@ -30,6 +30,7 @@ class _PizzaWidget extends State<PizzaWidget> {
 
   @override
   initState() {
+    print("INITIALIZE STATE FOR ${this.widget.quantityFlavors}");
     super.initState();
     data = List.generate(this.widget.quantityFlavors, (_) => null);
     tmpData = List.generate(this.widget.quantityFlavors, (_) => null);
@@ -63,6 +64,7 @@ class _PizzaWidget extends State<PizzaWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print("rebuilding widget ${this.widget.quantityFlavors}");
     return ClipRRect(
       borderRadius: BorderRadius.circular(this.widget.trayDiameter),
       child: Container(

@@ -11,12 +11,14 @@ import 'cart_item_button.dart';
 class CartItem extends StatelessWidget {
   final CartController cartController = Get.find();
 
+  final int position;
   final PizzaCart cartItem;
-  CartItem(this.cartItem);
+  CartItem(this.position, this.cartItem);
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      key: ValueKey(cartItem.hashCode),
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
@@ -78,7 +80,7 @@ class CartItem extends StatelessWidget {
             CartItemButton(Feather.plus, this.cartItem.incrementQuantity),
             SizedBox(width: 10),
             CartItemButton(
-                Feather.trash, () => cartController.deleteItem(this.cartItem)),
+                Feather.trash, () => cartController.deleteItem(this.position)),
           ],
         )
       ],

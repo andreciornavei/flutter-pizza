@@ -16,7 +16,7 @@ class CartList extends StatelessWidget {
         itemCount: controller.appController.cart.length,
         separatorBuilder: (context, index) => Divider(height: 25),
         itemBuilder: (context, index) {
-          return CartItem(controller.appController.cart.value[index]);
+          return CartItem(index, controller.appController.cart.elementAt(index));
         },
       ),
     );
