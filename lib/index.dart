@@ -64,7 +64,6 @@ class _PizzaWidget extends State<PizzaWidget> {
 
   @override
   Widget build(BuildContext context) {
-    print("rebuilding widget ${this.widget.quantityFlavors}");
     return ClipRRect(
       borderRadius: BorderRadius.circular(this.widget.trayDiameter),
       child: Container(
